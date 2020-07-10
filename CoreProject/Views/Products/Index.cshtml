@@ -1,0 +1,19 @@
+@using OnlineShopingApplication.Models;
+
+<h1><strong>Products Page</strong></h1>
+<ol>
+@{
+    
+    List<Product> theProduct = ViewBag.products as List<Product>;
+        
+           foreach (Product p in theProduct)
+            {
+                <li> @p.Title | @Html.ActionLink("Details","Details","Products",new {id = p.Id}) | 
+                    @Html.ActionLink("Update","Update","Products",new {id = p.Id}) | 
+                    @Html.ActionLink("Delete","Delete","Products",new {id = p.Id})
+                </li>
+        
+            }
+      
+}
+</ol>

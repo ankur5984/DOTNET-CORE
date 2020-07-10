@@ -1,0 +1,15 @@
+@using OnlineShopingApplication.Models;
+
+
+    @{
+        Product p = ViewBag.products as Product;
+        <h1><strong>
+            Details of @p.Title
+            </strong>
+        </h1>
+    }
+
+    @{
+        
+        <h3>@p.Price @p.Quantity</h3>
+    }
